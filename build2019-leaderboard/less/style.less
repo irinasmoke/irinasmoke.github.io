@@ -1,0 +1,113 @@
+@starDimension: 6px;
+
+body{
+  font-family: 'VT323', serif;
+  color:white;
+  font-size:2em;
+}
+
+h1{
+  text-align:center;
+  font-size: 2.75em;
+  letter-spacing:.05em;
+  text-transform: uppercase;
+  padding:.5em;
+
+}
+
+#board {
+ position: relative;
+ margin:auto;
+ width:75%;
+ z-index: 10;
+}
+
+#star-field {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  .star {
+    width: @starDimension;
+    height: @starDimension;
+    position: absolute;
+    background: #fff;
+    border-radius: 0%;
+    
+    &.far {
+      width: @starDimension - 1;
+      height: @starDimension - 1;
+    }
+    
+    &.near {
+      width: @starDimension + 2;
+      height: @starDimension + 2;
+    }
+    
+    &.white {
+      background: #fff;
+      box-shadow: 0 0 15px #fff;
+    }
+    
+    &.yellow {
+      background: #BFBB40;
+      box-shadow: 0 0 15px #BFBB40;
+    }
+    
+    &.blue {
+      background: #6FC5F1;
+      box-shadow: 0 0 15px #4444ff;
+    }
+    
+    &.red {
+      background: #DA75FF;
+      box-shadow: 0 0 15px #ff4444;
+    }
+  }
+}
+
+
+
+/* TABLE  */
+.users {
+  table-layout: fixed;
+  width: 100%;
+  white-space: wrap;
+}
+/* Column widths are based on these cells */
+.row-rank {
+  width: 10%;
+}
+.row-username {
+  width: 40%;
+}
+.row-ntests {
+  width: 30%;
+}
+.row-time {
+  width: 20%;
+}
+.users td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.users th {
+  text-transform:uppercase;
+  color:white;
+}
+.users td,
+.users th {
+  text-align: left;
+  padding: 5px 10px;
+}
+.users tr:nth-child(even) {
+  background: black;
+}
+
+.users tr:nth-child(1) {
+  color:yellow;
+}
