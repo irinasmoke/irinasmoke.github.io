@@ -1,28 +1,31 @@
 
-  var starFieldWidth = 1400;
-  var starFieldHeight = document.body.clientWidth; 
+  var starFieldHeight = document.body.offsetHeight;
+  var starFieldWidth = document.body.offsetWidth; 
   var nstars = 60;
   var starspeed = 3;
+  var starField = document.getElementById('star-field');
 
 
 //Setup page on page load
 (function () {
-  addStars(starFieldWidth, starFieldHeight, nstars);
-  animateStars(starFieldWidth, starspeed);
+  starField.style.width=starFieldWidth+"px";
+  starField.style.height=starFieldHeight+"px";
+  addStars(starFieldHeight, starFieldWidth, nstars);
+  animateStars(starFieldHeight, starspeed);
 })();
 
 
 // TODO: make some stars bigger than others, and have some blue,
 // red or white
-function addStars(starFieldWidth, starFieldHeight, noOfStars) {
-  var starField = document.getElementById('star-field');
+function addStars(starFieldHeight, starFieldWidth, noOfStars) {
+  
   var numberOfStars = noOfStars;
   
   for (var i = 0; i < numberOfStars; i++) {
     var star = document.createElement('div');
   	star.className = 'star';
-    var topOffset = Math.floor((Math.random() * starFieldHeight) + 1);
-    var leftOffset = Math.floor((Math.random() * starFieldWidth) + 1);
+    var topOffset = Math.floor((Math.random() * starFieldWidth) + 1);
+    var leftOffset = Math.floor((Math.random() * starFieldHeight) + 1);
     star.style.left = topOffset + 'px';
     star.style.bottom = leftOffset + 'px';
     star.style.position = 'absolute';
@@ -30,7 +33,7 @@ function addStars(starFieldWidth, starFieldHeight, noOfStars) {
   }
 }
 
-function animateStars(starFieldWidth, speed) {
+function animateStars(starFieldHeight, speed) {
   var starField = document.getElementById('star-field');
   var stars = starField.childNodes;
   
@@ -75,7 +78,7 @@ function animateStars(starFieldWidth, speed) {
       var leftChangeAmount = speed + getStarRelativeSpeed(i);
       var leftDiff;
       if (currentLeft - leftChangeAmount < 0) {
-        leftDiff = currentLeft - leftChangeAmount + starFieldWidth;
+        leftDiff = currentLeft - leftChangeAmount + starFieldHeight;
       }
       else {
         leftDiff = currentLeft - leftChangeAmount;
