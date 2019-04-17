@@ -4,65 +4,105 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'ShareTechMono';
+    src: url('../fonts/ShareTechMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Karmatic Arcade';
+    src: url('../fonts/ka1.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 
 
 body {
-  font-family: 'VT323', serif;
+  font-family: 'ShareTechMono', serif;
   color: white;
-  font-size: 2em;
+  font-size: 2.25em;
+  background:black;
 }
+
 h1 {
   text-align: center;
   font-size: 2.75em;
-  letter-spacing: 0.05em;
+  letter-spacing: .10em;
   text-transform: uppercase;
-  padding: 0.5em;
+  margin: .5em;
+  color: #E6C9FF;
+  font-family: 'VT323', serif;
 }
-#board {
+
+h2{
+  font-size:.75em;
+}
+
+#board, #about {
   position: relative;
   margin: auto;
   width: 75%;
   z-index: 10;
 }
+
+#about p{
+  font-size:.75em;
+  }
+
+#about{
+  border-top:1px solid #3f3f3f;
+  padding: .75em 0px;
+  margin-top:1.5em;
+  color:#AfAfaf;
+}
+
 #star-field {
-  width: 100%;
-  height: 100%;
   background: #000;
   position: absolute;
   top: 0;
   left: 0;
 }
 #star-field .star {
-  width: 6px;
-  height: 6px;
+  width: 4px;
+  height: 4px;
   position: absolute;
   background: #fff;
   border-radius: 0%;
 }
 #star-field .star.far {
+  width: 3px;
+  height: 3px;
+}
+#star-field .star.near {
   width: 5px;
   height: 5px;
 }
-#star-field .star.near {
-  width: 8px;
-  height: 8px;
-}
 #star-field .star.white {
   background: #fff;
-  box-shadow: 0 0 15px #fff;
+  box-shadow: 0 0 8px #fff;
 }
 #star-field .star.yellow {
   background: #BFBB40;
-  box-shadow: 0 0 15px #BFBB40;
+  box-shadow: 0 0 8px #BFBB40;
 }
 #star-field .star.blue {
   background: #6FC5F1;
-  box-shadow: 0 0 15px #4444ff;
+  box-shadow: 0 0 8px #6FC5F1;
 }
 #star-field .star.red {
-  background: #DA75FF;
-  box-shadow: 0 0 15px #ff4444;
+  background: #E6C9FF;
+  box-shadow: 0 0 8px #E6C9FF;
 }
+
+
+
+
+
+
+
 /* TABLE  */
 .users {
   table-layout: fixed;
@@ -70,18 +110,27 @@ h1 {
   white-space: wrap;
 }
 /* Column widths are based on these cells */
-.row-rank {
+.col-1 {
   width: 10%;
 }
-.row-username {
+.col-2 {
   width: 40%;
 }
-.row-ntests {
+.col-3 {
   width: 30%;
 }
-.row-time {
+.col-4 {
   width: 20%;
 }
+/*Align certain co.umns right*/
+.users .col-3 {
+  text-align: right;
+}
+
+.users td:nth-child(3) {
+  text-align:right;
+}
+
 .users td {
   white-space: nowrap;
   overflow: hidden;
@@ -96,9 +145,11 @@ h1 {
   text-align: left;
   padding: 5px 10px;
 }
-.users tr:nth-child(even) {
-  background: black;
-}
+
 .users tr:nth-child(1) {
   color: yellow;
 }
+.users tr:nth-child(n+2):nth-child(-n+5)  {
+  color: #6FC5F1;
+}
+
