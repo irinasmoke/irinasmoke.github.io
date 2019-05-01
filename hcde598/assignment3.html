@@ -4,7 +4,7 @@
         <meta charset="utf-8"> 
         <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
 
-        <title>Example Student's HCDE 439 Physical Computing Page!</title> 
+        <title>3D Printed and Laser Cut Lamp Shade</title> 
 
         <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
 
@@ -12,14 +12,109 @@
     <body> 
 
         <div class="header">
-            <h1>Example Student's Assignment 2!</h1>
+            <h1>3D Printed and Laser Cut Lamp Shade</h1>
+            <img src="images/assignment3/lamp-final.jpg" width=300 alt="Lamp shade">
             <p>
-            <img src="red-panda.jpg" width=400></a>
+            This assignment was to create a lamp shade by combining parts made with 3D printing, laser cutting, and an existing light socket. I used this <a href="https://www.amazon.com/gp/product/B01LFYVW7O/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1">small hanging light socket</a>.
             </p>
             <p>
-            Here is all the documentation for assignment 2!
+
             </p>
-        </div>
+
+            <h2>Inspiration & Brainstorming</h2>
+            <div class="img-div">
+                    <img src="images/assignment3/ikea-lamp.JPG" width=400 alt="Ikea NYMO lamp">
+                    <p class="caption"></p>
+                </div>
+            <p>
+                I looked up Ikea lamp shades because I remembered that I had seen ones with nice patterns there before. I found the <a href="https://www.ikea.com/us/en/catalog/products/90340788/">Ikea NYMO lamp </a> and decided to recreate it.
+            </p>
+            <p>
+                From there, I sketched out some ideas for how I could recreate the drum shape. I decided to use paper for the outside of the drum because it could be bent. I held the paper together using 3d printed and cardboard parts. 
+            </p>
+
+            <div class="img-div">
+                    <img src="images/assignment3/sketching.jpg" width=400 alt="sketches">
+                    <p class="caption"></p>
+                </div>
+
         
+        <p >I decided to use two standard pieces of 8.5 x 11" paper as the sides of the drum. Because of this, I decided to make a 6" diameter drum.</p>
+
+            <h2>3D printed clasps</h2>
+            <img src="images/assignment3/clasp - base shape.png" width=400 alt="basic shape of the 3d clasp">
+            <p class="caption"> I created the blue portion of this shape in Illustrator and imported it into Rhino.</p>
+            <p class>First, I designed the clasps on the outside of the lamp that would be 3d printed and hold the paper in place. The shape is rounded on the inside so that the paper pieces will curve around into a circle. They are flat on the outside so that they can be 3d printed on that edge and avoid having to print supports.. </p>
+
+                <div class="img-div">
+                        <img src="images/assignment3/rhino-no-cap.png" width=400 alt="hollow shapes in rhino">      
+                    </div>
+                    <p> One issue I ran into is trying to join shapes together in Rhino. I had the shapes in Wireframe view, and did not realize that they were hollow because I had to apply the Cap command. After repeatedly trying to apply BooleanUnion, I finally decided to look at items in Rendered mode, at which point I saw my mistake. Once I figured this out, I applied the Cap command and proceeded.</p>
+                    <div class="img-div">
+                            <img src="images/assignment3/messed-up-3d-print.jpg" width=400 alt="3d print that didn't work out">      
+                        </div>
+                        <p> I went through 6 3D printing rounds before I finally had all the pieces I needed. Some things that went wrong were:</p>
+                        <ul>
+                            <li>File scaled wrong in Dremel</li>
+                            <li>Wrong file selected on 3d printer</li> 
+                            <li>Nozzle not hot enough</li> 
+                            <li>Nozzle hit and broke piece</li>   
+                        </ul>
+                        <p> The biggest issue was with temperatures. As you can see in the image above, I tried several times to print at 230 degrees, but it did not work. When I switched to 235, it worked much better.</p>
+                        <img src="images/assignment3/Dremel.png" width=400 alt="grasshopper and rhino file">
+                        <p class="caption">Final print in Dremel. Once I was confident that I had all the settings correct, I printed 3 pieces for a total of 4 3d printed pieces.</p>
+
+            <h2>Cardboard connectors</h2>
+            <div class="img-div">
+                    <img src="images/assignment3/gh-not used.png" width=600 alt="grasshopper and rhino file">
+                    <p class="caption">Grasshopper file & Rhino output that I didn't end up using because I redesigned the shape and decided it would be faster to redo in Illustrator.</p>
+                </div>
+            <p>
+                I decided to make the inner parts of the lamp, including the ones that connected to the socket, out of cardboard because they were large and would take a long time to 3d print. After sketching my initial design, I made the shapes using Grasshopper. However, I eventually decided to change the design of the inside of the lamp and decided that it was not worth re-doing the design in Grasshopper, so I switched to Illustrator to save time.
+            </p>
+
+            <div class="img-div">
+                    <img src="images/assignment3/move to ai.png" width=500 alt="">
+                    <p class="caption">I ended up making the cardboard pieces in Illustrator because it allowed me to change the design more quickly than Rhino.</p>
+                </div>
+
+            <h2>Paper pattern</h2>
+
+            <img src="images/assignment3/pattern-tall.png" height=300 alt="">
+            <img src="images/assignment3/paper laser cut.gif" height=300 alt="laser cut gif">
+            
+        </p>     
+        I had the most fun creating my pattern. I tried first to use Adobe Experience Design because it has a great "repeat grid" feature that is useful for repeating patterns. However, I could not get the SVG to properly import into Illustrator, so just as with the cardboard pieces, I ended up recreating the pattern in Illustrator.
+    </p> 
+            <div class="img-div">
+                    <img src="images/assignment3/assembly - 02.jpg" height=300 alt="assembling the lamp">
+                    <img src="images/assignment3/shade-short.jpg" height=300 alt="assembling the lamp">
+                    <img src="images/assignment3/shade-short-02.jpg" height=300 alt="assembling the lamp">
+                    <p class="caption">Uh oh! Not enough room for the bulb to fit.</p>
+                </div>
+            <p>When I first aseembled all the pieces, I realized that I had completely forgot to consider the fact that I had to leave room for the light bulb. Luckily, the fix was easy. I simply made and printed a taller version of the paper pattern and reassembled.</p>
+
+
+            <h2>Final Result</h2>
+            <p>Finally, with the taller paper piece, I was able to assemble everything. I had to be careful with fitting the paper pieces around the 3D printed parts to make sure the paper did not rip.</p>
+
+
+            <div class="img-div">
+                    <img src="images/assignment3/assembly - 01.jpg" height=400 alt="assembling the lamp">
+                    <img src="images/assignment3/lamp-final.jpg" height=400 alt="">
+                    <img src="images/assignment3/lamp-final-02.jpg" height=400 alt=" ">
+                    <p class="caption">The final result!</p>
+            </div>
+            <h2>Thanks</h2>
+                <p>A big thanks to Hannah and Elizabeth for answering some questions at the MILL about the printers, and for Andrew, a MILL employee, for helping me troubleshoot the 3D printer and laser cutter.</p>
+            <h2>Source Files</h2>
+            <p>Download the source files here:</p>
+                <ul>
+                    <li><a href="images/assignment3/files/clasp-FINAL.3dm">Rhino 3d clasps</a></li>
+                    <li><a href="images/assignment3/files/cardboard-inner-pieces.ai">Cardboard inner pieces</a></li>
+                    <li><a href="images/assignment3/files/paper-pattern-FINALai.ai">Paper pattern</a></li>
+                </ul>
+
+            </div>
     </body>
 </html>
