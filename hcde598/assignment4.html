@@ -4,7 +4,7 @@
         <meta charset="utf-8"> 
         <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
 
-        <title>Assignment 4</title> 
+        <title>A4: Mechanical Design</title> 
 
         <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
 
@@ -12,13 +12,58 @@
     <body> 
 
         <div class="header">
-            <h1>Example Student's Assignment 2!</h1>
+            <h1>Mechanical Design</h1>
             <p>
-            <img src="red-panda.jpg" width=400></a>
+            <img src="images/assignment4/final design.gif" width=400>
             </p>
             <p>
-            Here is all the documentation for assignment 2!
+            For this assignment, I modeled a sliding mechanism in <a href="https://onshape.com"> On Shape</a> and made it out of laser cut acrylic and plastic push in rivets.
             </p>
+            <h2>Inspiration & Modeling</h2>
+            <p>I started out this project by looking up different gifs of link mechanisms. I found the gif above of the Klann Linkage and decided to recreate it. According to <a href="https://en.wikipedia.org/wiki/Klann_linkage"> Wikiepdia</a> the Klann linkage is meant to look like "the gait of legged animal," but I also thought looked like it created a motion that, if had a string attached to it, would be something my cat would like to play with, so I decided to make the mechanism large enough so that it could move a string around enough to be a fun cat toy.</p>
+            <img src="images/assignment4/Klann-Linkage-Animation.gif" width=400 alt="Klann Linkage Animation">
+            <p class="caption">Source: <a href="https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwi34ZmMmYviAhUC7Z8KHZp_CyoQjhx6BAgBEAM&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3AKlann-Linkage-Animation.gif&psig=AOvVaw00dwBKRcfi-nu13X7uLUot&ust=1557379557103757"> Wikimedia Commons</a></p>
+            <p>I started modeling this in OnShape by creating the links and rivets. I looked at the files that Joshua shared as a guide, but decided to recreate the shapes myself in order to learn how OnShape works.</p>
+            <img src="images/assignment4/basic link extruded.png" width=400 alt="">
+            <img src="images/assignment4/basic rivet.png" width=400 alt="">
+            <p class="caption">Basic link shape (post-extrusion) and rivet (sketch mode) in OnShape. These pieces made up the mechanism.</p>
+             <p>Using Illustrator, I measured the length of the links in the gif so that I could match the same proportions. I then created variations of the original link part and started to assemble them.</p>
+             <p>In the end, I ran into too many problems with this design. I had issues figuring out in what order the links should go such that they don't stack in a different spot on their two rivets. I also struggled to find a way to link them together such that the circular motion I needed to crank the mechanism could be completed without hitting a link. Also, after a lot of trial and error, I learned that I needed to use the Cylindrical Mate instead of the Resolute mate (which doesn't allow for vertical motion). Even still, I ran out of time trying to model this properly and moved on to a simpler mechanism.</p>
+             <p>(You can see my attempts in the OnShape files I link to at the end. They're mechanisms in tabs other than my final assembly labeled "Abandoned Klann linkage attempt" #1, #2, and #3.)</p>
+             <img src="images/assignment4/Failed Klann.png" width=400 alt="">
+             <p class="caption">One of my attempts are recrating the Klann linkage in OnShape. I had a lot of problems figuring out how to stack the links properly so that they didn't interfere with one another.</p>
+
+             
+             <h2>Pivot to a simpler design</h2>
+             <img src="http://www.examhill.com/wp-content/uploads/2017/02/Crank-Rocker_4_bar_linkage.gif" width=400 alt="">
+             <p class="caption">The simpler mechanism I ended up modeling and creating.</p>
+             <p>I pivoted to a simpler, 3 link design. Because I already had the links and rivets modeled, it was easy to change the length of the links to the proportions I needed for this new design (I used 3.46, 12, and 7.6 inch links). However, I did have to newly model the link on the bottom which held everything together, since the first design was based on a triangle, but this one was not. I needed to leave room for the rivet to pivot "through" the bottom link. </p>
+             <img src="images/assignment4/model in progress.png" width=400 alt="">
+             <p class="caption">My model in progress. The links have Cylindrical Mates between them and the motion works from the top view. I learned from my first attempt that it is easier to first model just this, and later add on the planar mates and stack everything together.</p>
+
+             <img src="images/assignment4/handle-attempt.gif" width=400 alt="">
+             <p>I originally wanted to add a handle to the crank, and included a cut out on one of the links to insert a handle into (which I planned to either 3d print or use a wine cork. However, modeling it out helped me realize that this would not work because if the handle pushed through the acrylic, it would interfere with motion behind it. If it did not push through, then it probably would not stay put very well.</p>
+             <p>I considered glueing a handle on, but didn't have easy access to glue that would stick to acrylic. Finally, I had the idea to just reverse one of the rivets and use that as the handle - duh!</p>
+             <img src="images/assignment4/final design.gif" width=400 alt="">
+             <p>Finally, I had the model done, with the motion working as expected, and was ready to cut. I exported DXF files from the sketches and from the face of one of the pieces and imported them into illustrator.</p>
+            <h2>Laser cut & Assembly</h2>
+            <p> I cut out of 1/8th inch acrylic because I could fit two of those pieces into the rivet. I cut a few test pieces to test the press-fit.</p>
+            <img src="images/assignment4/acrylic-width testing.jpg" width=400 alt="">
+            <p class="caption">Testing different notch thicknesses for the acrylic. For 1/8th in acrylic, I ended up liking the feel of .1 notches the best.</p>
+            <p> Lastly, when I was happy with the notch thicknesses, I cut out all the pieces and assembled! The motion works as expected, though it does get caught on a rivet at one point, but works well if you pull out on it a little as you crank.</p>
+            <img src="images/assignment4/final design irl.gif" width=400 alt="">
+
+            <h2>User Testing</h2>
+            <img src="images/assignment4/cat-usertesting.gif" width=400 alt="">
+            <p class="caption">My cat maybe, kind of likes it.</p>
+            <h2>Source Files</h2>
+            <ul>
+                <li>Final <a href="https://cad.onshape.com/documents/c1c3134ab9312823e4d6fe6b/w/ac84b7aac30ace3d5b283047/e/b1f8e0328d7e7b00765c1873"> OnShape mechanism assembly</a> (and original attempts)</li>
+                <li><a href="https://cad.onshape.com/documents/77acf5f7eb3a59c570edb900/w/c886b6fb753de0c1b5f2a4da/e/c6021f702b69592e2e074646">Link parts</a> used in assembly</li>
+                <li> <a href="https://cad.onshape.com/documents/2b026472172769ebd0b511a7/w/730aefa8b6c0fc7e3b07d0d4/e/48a24888ac08821df6860228"> Rivet part</a> used in assembly</li>
+                <li><a href="images/assignment4/full-mechanism-kit.ai">Illustrator file of the full mechanism kit</a> (all parts except rivet).</li>
+            </ul>
+
         </div>
         
     </body>
