@@ -4,7 +4,7 @@
         <meta charset="utf-8"> 
         <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
 
-        <title>Example Student's HCDE 439 Physical Computing Page!</title> 
+        <title>CNC Milling</title> 
 
         <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
 
@@ -12,13 +12,64 @@
     <body> 
 
         <div class="header">
-            <h1>Example Student's Assignment 2!</h1>
-            <p>
-            <img src="red-panda.jpg" width=400></a>
-            </p>
-            <p>
-            Here is all the documentation for assignment 2!
-            </p>
+            <h1>CNC Milling</h1>
+                <p>
+                <img src="images/assignment5/final box in hand.jpg" width=400>
+                </p>
+                <p>
+                This assignment was to create an object out of <a href="https://support.bantamtools.com/hc/en-us/articles/115001671734-FR-1-PCB-Blanks-"> FR1</a> using CNC milling.
+                </p>
+            <h2>Design in OnShape</h2>
+                <p>I decided to do a simple design for this assignment, creating a cube with solid sides. My dimensions were quite small - the largest piece is 33mm wide - because I wanted to be able to mill the entire box out of one piece of 70mm x 100mm FR1. The reason I wanted to be able to make the entire thing out of 1 piece was that I'd ordered only 4 pieces, and at least one piece was needed to act as a buffer between the machine and the FR1 I actually needed to cut, and I wanted to leave some room for error.</p>
+                <p>I started by designing the cube in OnShape.</p>
+                <img src="images/assignment5/OnShape box design 02.png" width=400 alt="">
+                <img src="images/assignment5/OnShape box design 01.png" width=400 alt="">
+                <p class="caption">I modeled 3 different parts and duplicated each one for a total of 6 sides of the cube.</p>
+             <h2>Workflow </h2>
+             <p>I exported the sides of the extruded parts from OnShape to DXF, imported those into kicad, exported those as gerber files, and imported that into the Bantam Tools software, which connects directly to the Bantam milling machines. </p>
+             <img src="images/assignment5/kicad.png" width=400 alt="">
+             <img src="images/assignment5/ready for first print.jpg" width=400 alt="">
+             <p class="caption">Ready for my first CNC milling. Though I knew better from previous assignments, I was feeling optimistic and decided to mill the whole thing on the first try. It's possible for things in digital fabrication to work perfectly well on the first try, right? </p>
+             
+             <h2>Testing notch size</h2>
+  
+             <p>The first time I milled the pieces, they did not fit together because the notches were not wide enough at 1.6mm, which is 1mm bigger than the FR1.</p>
+             <p>I decided to test several different sizes warying by .05 mm. I made this test as a simple sketch in OnShape on the side of the main object I was modeling. However, this is where I ran into a problem. For some reason, the notches were being milled <i>way</i> wider than I anticipated.</p>
+             <img src="images/assignment5/test notches - Sketch.png" height=250 alt="">
+             <img src="images/assignment5/notches too big - measurement.jpg" height=250 alt="">
+             <p class="caption">Despite being set to 1.75mm and 1.8mm in OnShape, the notches being milled were much larger</p>
+
+            
+             <p>At first, I thought this was a file export/resize issue, but after re-doing the workflow a few times I knew it had to be something else. That's when I started looking more closely at the previews and toolpaths in Bantam Tools and realized what was happening - it was interpreting the files as if it should mill <i>around</i> the notches, rather than mill the inside of the shape.</p>
+             <p>To fix this, I put a bounding box around the shapes in OnShape, and used the face of the extruded part. This worked well. </p>
+            
+             <img src="images/assignment5/Bantam - outer cuts.png" height=200 alt="">
+             <img src="images/assignment5/Bantam - inner cuts fixed.png" height=200 alt="">
+             <p class="caption">I fixed the issue by adding a bounding box around the shapes. </p>
+
+
+             <img src="images/assignment5/notches too big.jpg" width=400 alt="">
+            <p class="caption">The result of the first picture above - milling outside the lines, which is not what I was intending.</p>
+        
+            <p>Finally, after this issue was fixed and I was able to mill the notches properly, I tested the fit and found the right dimensions to use (1.7mm).</p>
+                <img src="images/assignment5/good fit.jpg" width=400 alt="">
+                <p class="caption">Finally happy with the fit of the pieces (1.7mm notches). </p>
+            
+            <h2>Final Design</h2>
+                <p>Once I was happy with the fit of the pieces, I re-milled all the sides and assembled!</p>
+
+                <img src="images/assignment5/final box.jpg" width=400>
+                <img src="images/assignment5/final box in hand.jpg" width=400>
+
+                <h2>Thank you</h2>
+                <p>A huge thank you to Gabi for talking through the milling inside/outside lines issue with me and helping me understand what was happening. Also thanks to Hannah for giving me some tips about how to set up the milling machine, including to wipe down the base before sticking down the FR1.</p>
+
+                <h2>Source Files</h2>
+                <p>You can find the source files for the final object I milled here:</p>
+                <ul>
+                    <li><a href="https://cad.onshape.com/documents/cf8816762fb7149dce3804b7/w/b6e45d4e1d18e698f763bc44/e/b8d3740c90ed7804635ce0da">OnShape model</a></li>
+                    <li><a href="images/assignment5/final files/cube - v2-Edge_Cuts.gbr">Gerber files</a> I used for the final mill</li>
+                </ul>
         </div>
         
     </body>
