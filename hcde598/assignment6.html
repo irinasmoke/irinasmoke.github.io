@@ -4,7 +4,7 @@
         <meta charset="utf-8"> 
         <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
 
-        <title>Example Student's HCDE 439 Physical Computing Page!</title> 
+        <title>Molding & Casting</title> 
 
         <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
 
@@ -12,13 +12,68 @@
     <body> 
 
         <div class="header">
-            <h1>Example Student's Assignment 2!</h1>
+                <h1>A6: Molding & Casting</h1>
+
             <p>
             <img src="red-panda.jpg" width=400></a>
             </p>
             <p>
-            Here is all the documentation for assignment 2!
+            This assignment was to create a mold for a mold via either 3d printing or milling, then to make a silicone mold and 4 casts from that mold with plaster.
             </p>
+
+            <h2>CAD Modeling & Milling Prep</h2>
+
+            <p>I started this assignment by modeling in OnShape. I decided to make a hexagon shape with a bee inside, so that the multiple casts can be put together and make a honeycomb.</p>
+            
+            <p>
+            I found this <a href="https://www.thingiverse.com/thing:1325754">.stl file of a bee</a> on Thingiverse. However, I wanted to use OnShape (just a personal preference over Rhino), and I realized that OnShape does not work well with meshes. It will show the mesh, but it will not allow you to work with it and integrate it with other parts. To fix this, I remade the shape as a Sketch that got close to the original face of the mesh.
+            </p>
+
+            <img src="images/assignment6/bee-mesh.png" height=250>
+            <img src="images/assignment6/bee-mesh-outline.png" height=250>
+            <p class="caption">Creating a sketch in OnShape based on an stl file from Thingiverse.</p>
+
+            <h3>Toolpaths</h3>
+            <p>I created toolpaths using the Manufacture features in Fusion 360 and exporting the gcode, and importing that into the Bantam Tools software. Using 1/8 inch bit did not provide enough fidelity to be able to see the bee shape, although Bantam said it would take a reasonable 30 minutes. Using a 1/16 inch bit made the bee shape much clearer, but said it would take 2.5 hours. Because of this, I decided to find a simpler bee shape that could still be clear when milled with 1/8th inch bit. </p>
+            <img src="images/assignment6/Bantam 30 mins.png" width=500>
+            <img src="images/assignment6/Bantam 2hrs.png" width=500>
+            <p class="caption">Using a larger bit meant that the bee shape would not appear correctly. Using a smaller bit gave more fidelity, but would take 2.5 hours to mill.</p>
+
+            <p>I found <a href="https://cad.onshape.com/documents/ea1c00582d6eb98f7f0f1a80/w/56133a11307c8c575ec9a1f0/e/526de90ba26c32c1e5b70199">another, simpler bee shape</a> in an OnShape public link and used that. This shape was simple enough to show up well with a 1/8 inch bit and would take only about 30 minutes to mill.</p>
+            <img src="images/assignment6/Bantam final.png" width=500>
+
+            <h2>Pivot to 3D Printing</h2>
+            <p>
+            When I arrived at Fluke on Sunday and realized that the  machinable wax block I had did not fit in the Othermill, I decided to switch to 3D printing, which ended up working well for me. I used the same stl file and imported it into the Dremel printer software. Miraculously, my 3D print came out great on the first try with no problems, and only took about 35 minutes. Yay!
+            </p>
+
+            <img src="images/assignment6/3dpriting-hex-01.jpg" width=400>
+            <img src="images/assignment6/3dpriting-hex-02.jpg" width=400>
+
+            <h2>Silicone Mold</h2>
+            <p>To make the silicone mold, I used the recommended SmoothOn kit. I wanted to use a paper cup, but my shape did not fit on the bottom of it, so I created a bottom using a lid from a jar. I glued the piece down after getting a tip from Julie Do that the piece might float up in the plaster if not secured down. I used caulk to do this, since that's what I had on hand at home.</p>
+            <img src="images/assignment6/caulk01.jpg" width=400>
+            <img src="images/assignment6/caulk02.jpg" width=400>
+            <p class="caption">I held down the bottom of my mold with caulk.</p>
+
+            <img src="images/assignment6/pouring-silicone.jpg" width=400>
+            <p>I left the silicone overnight, and it came out great with no problems.</p>
+            <img src="images/assignment6/mold-done-02.jpg" height=300>
+            <img src="images/assignment6/mold-done.jpg" height=300>
+
+            <h2>Casting Plaster</h2>
+            <p>TBD...</p>
+
+            <h2>Thanks</h2>
+            <p>Thanks to Julie T Do, Krista, and Nitya for pointing me towards the 3D printing route, which ended up working well, for Andrew Waer for posting on Slack about how to avoid scaling issues when importing into Fusion 360, which I'm sure saved me a ton of time.</p>
+            
+            <h2>Source Files</h2>
+            <ul>
+            <li>
+                <a href="https://cad.onshape.com/documents/0b7224fe0e9a3715ee71c7a0/w/34a79453af3071b22e7fb4d0/e/6d2ad086bc7d2a98dc09ad76">OnShape</a> hexagon and bee
+            </li>
+        </ul>
+
         </div>
         
     </body>
